@@ -5,7 +5,7 @@ LABEL version="1.0" \
 
 RUN apt-get update && \
     apt-get upgrade -y
-RUN apt-get install apt-transport-https ca-certificates
+RUN apt-get install apt-transport-https ca-certificates apt-utils
 
 ADD https://repo.mosquitto.org/debian/mosquitto-repo.gpg.key .
 RUN apt-key add mosquitto-repo.gpg.key
